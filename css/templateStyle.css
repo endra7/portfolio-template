@@ -1,0 +1,78 @@
+:root {
+	--primary-color:#5680E9;
+	--primary-color-light:#84CEEB;
+	--accent-color: #8860D0;
+	--secondary-color: #5AB9E4;
+	--default-color: #C1C8E4;
+}
+* {
+	box-sizing: border-box;
+}
+
+/*Style the body*/
+body {
+	font-family:verdana;
+	margin: 0;
+	/*background-color: var(--primary-color);*/
+}
+
+/*Header*/
+
+
+/*Style the top navigation bar*/
+.navbar {
+	display: flex;
+	background-color: var(--secondary-color);
+}
+/*Styling navigation bar links*/
+.navbar a {
+	color:white;
+	padding: 14px 20px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 0.7em;
+}
+
+/*Change color on hovering over navbar*/
+.navbar a:hover {
+	background-color: var(--accent-color);
+	color: var(--default-color);
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .navbar {   
+    flex-direction: column;
+  }
+}
+
+/*flex container*/
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+}
+
+.testBorder{
+	border: 1px solid red;
+}
+
+/*Header elements style*/
+
+img {
+	width: auto;
+	height: 80px;
+}
+
+/*For round profile image*/
+.profile-img {
+	border-radius: 50%;
+}
+
+
+.grid-wrapper {
+	display:grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+
+}
