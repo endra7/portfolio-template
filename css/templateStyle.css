@@ -4,15 +4,19 @@
 	--accent-color: #8860D0;
 	--secondary-color: #5AB9E4;
 	--default-color: #C1C8E4;
+	--shadow : 0 1px 5px rgba(104,104,104,0.8);
 }
 * {
 	box-sizing: border-box;
+	font-family: verdana;
+	
 }
 
 /*Style the body*/
 body {
-	font-family:verdana;
-	margin: 0;
+	margin:5px;
+	line-height: 1.4rem;
+	color: #fff;
 	/*background-color: var(--primary-color);*/
 }
 
@@ -38,41 +42,115 @@ body {
 	background-color: var(--accent-color);
 	color: var(--default-color);
 }
+
+/*For round profile image*/
+.rounded {
+	border-radius: 50%;
+}
+.rounded-small{
+	width: 30%;
+	height: 30%;
+}
+.rounded-profile{
+	width: 30%;
+	height: 50%;
+}
+/*For testing cell*/
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+}
+.btn {
+	background-color: var(--primary-color);
+	color: var(--primary-color-light);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border:0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.wrapper {
+	display: grid;
+	grid-gap: 20px;
+}
+/*Bio-cover*/
+.bio-cover {
+	height: 30vh;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas:
+	'intro intro top-box-a'
+	'intro intro top-box-b';
+}
+
+.top-box-a {
+	grid-area: top-box-a;
+}
+
+.top-box-b {
+	grid-area: top-box-b;
+}
+
+.intro {
+	grid-area: intro;
+	min-height: 400px;
+	background-color: var(--primary-color);
+	padding:3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+.intro h2 {
+	font-size: 4rem;
+	margin-bottom: 0;
+	color: var(--default-color);
+}
+.intro p {
+	font-size: 1.3rem;
+	margin-top: 0;
+	color: var(--default-color);
+}
+
+.top-box {
+	background: var(--default-color);
+	display: grid;
+	align-items: center;
+	justify-content:center;
+	box-shadow: var(--shadow);
+	padding: 1.5rem;
+}
+
+
+
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
   .navbar {   
     flex-direction: column;
   }
+  .bio-cover {
+  	grid-template-areas:
+  	'intro intro'
+  	'top-box-a top-box-b';
+  }
 }
 
-/*flex container*/
-.container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 50vh;
-}
-
-.testBorder{
-	border: 1px solid red;
-}
-
-/*Header elements style*/
-
-img {
-	width: auto;
-	height: 80px;
-}
-
-/*For round profile image*/
-.profile-img {
-	border-radius: 50%;
+@media screen and (max-width: 500px){
+	.navbar {
+		flex-direction: column;
+	}
+	.bio-cover {
+		grid-template-areas:
+		'intro'
+		'top-box-a'
+		'top-box-b';
+	}
 }
 
 
-.grid-wrapper {
-	display:grid;
-	grid-gap: 20px;
-	grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
 
-}
+
