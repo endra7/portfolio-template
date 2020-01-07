@@ -9,12 +9,13 @@
 * {
 	box-sizing: border-box;
 	font-family: verdana;
+	color: black;
 	
 }
 
 /*Style the body*/
 body {
-	margin:5px;
+	margin:1rem;
 	line-height: 1.4rem;
 	color: #fff;
 	/*background-color: var(--primary-color);*/
@@ -48,8 +49,8 @@ body {
 	border-radius: 50%;
 }
 .rounded-small{
-	width: 30%;
-	height: 30%;
+	width: 2rem;
+	height: 2rem;
 }
 .rounded-profile{
 	width: 30%;
@@ -74,13 +75,12 @@ img {
 
 .wrapper {
 	display: grid;
-	grid-gap: 20px;
+	grid-gap: 0px;
 }
 /*Bio-cover*/
 .bio-cover {
-	height: 30vh;
 	display: grid;
-	grid-gap: 20px;
+	grid-gap: 0px;
 	grid-template-areas:
 	'intro intro top-box-a'
 	'intro intro top-box-b';
@@ -88,42 +88,76 @@ img {
 
 .top-box-a {
 	grid-area: top-box-a;
+
 }
 
 .top-box-b {
 	grid-area: top-box-b;
 }
 
+.top-box-a > h4 {
+	text-align: center;
+}
+
+.top-box-b > h4 {
+	text-align: center;
+}
+.membership {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-bottom: 0rem;
+}
+
 .intro {
 	grid-area: intro;
+	align-items: stretch;
+	/*Rather than grid, covering intro grid section with card layout*/
+	/*grid-area: intro;
 	min-height: 400px;
 	background-color: var(--primary-color);
 	padding:3rem;
 	display: flex;
-	flex-direction: column;
 	align-items: start;
 	justify-content: center;
-	box-shadow: var(--shadow);
+	flex-direction: column;
+	box-shadow: var(--shadow);*/
+	border:0px;
+	margin: 0px;
+	width: auto;
+	text-align: center;
+
 }
+
+.intro>img{
+	padding: 0.3rem;
+	margin: 1rem;
+}
+
 .intro h2 {
-	font-size: 4rem;
-	margin-bottom: 0;
+	font-size: 1.2rem;
 	color: var(--default-color);
 }
 .intro p {
-	font-size: 1.3rem;
-	margin-top: 0;
+	font-size: 0.8rem;
+	margin: 1rem;
 	color: var(--default-color);
+
 }
 
-.top-box {
+
+/*.top-box {
 	background: var(--default-color);
 	display: grid;
 	align-items: center;
 	justify-content:center;
 	box-shadow: var(--shadow);
 	padding: 1.5rem;
-}
+}*/
 
 
 
@@ -137,6 +171,10 @@ img {
   	'intro intro'
   	'top-box-a top-box-b';
   }
+  .membership {
+  	flex-direction: column;
+
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -149,8 +187,12 @@ img {
 		'top-box-a'
 		'top-box-b';
 	}
+
 }
 
+.test {
+	border: 2px solid red;
+}
 
 
 
