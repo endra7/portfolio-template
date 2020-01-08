@@ -2,8 +2,9 @@
 	--primary-color:#00bcd4;
 	--primary-color-light:#80deea;
 	--primary-color-dark: #0097a7;
-	--accent-color: #00e5ff;
+	--complementary-primary-color: #A71000;
 	--secondary-color: #1F6BE0;
+	--accent-color:#A70097;
 	--default-color: #C1C8E4;
 	--shadow : 0 1px 5px rgba(104,104,104,0.8);
 }
@@ -29,7 +30,7 @@ body {
 /*Style the top navigation bar*/
 .navbar {
 	display: flex;
-	background-color: var(--secondary-color);
+	background-color: var(--primary-color-dark);
 }
 /*Styling navigation bar links*/
 .navbar a {
@@ -42,7 +43,7 @@ body {
 
 /*Change color on hovering over navbar*/
 .navbar a:hover {
-	background-color: var(--accent-color);
+	background-color: var(--complementary-primary-color);
 	color: var(--default-color);
 }
 
@@ -64,8 +65,8 @@ table, th, td {
   text-align: center;
 }
 .btn {
-	background-color: var(--primary-color);
-	color: var(--primary-color-light);
+	background-color: var(--primary-color-light);
+	color: var(--default-color);
 	padding: 0.6rem 1.3rem;
 	text-decoration: none;
 	border:0;
@@ -121,6 +122,18 @@ img {
 	margin-left: 1rem;
 	margin-right: 1rem;
 	margin-bottom: 1rem;
+}
+.membership a {
+	color:white;
+	padding: 14px 20px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 0.7em;
+}
+
+.membership a:hover {
+	background-color: var(--complementary-primary-color);
+	color: var(--default-color);
 }
 
 .intro {
