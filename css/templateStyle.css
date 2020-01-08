@@ -74,8 +74,16 @@ img {
 }
 
 .wrapper {
-	display: grid;
+/*	display: grid;
 	grid-gap: 0px;
+	grid-template-areas: 
+	'navbar navbar navbar'
+	'bio-cover bio-cover bio-cover'
+	'Qualifications Qualifications Option2'
+	'Option3 Option3 Option3'
+	;*/
+	display: flex;
+	flex-direction: column;
 }
 /*Bio-cover*/
 .bio-cover {
@@ -110,7 +118,7 @@ img {
 	margin-top: 1rem;
 	margin-left: 1rem;
 	margin-right: 1rem;
-	margin-bottom: 0rem;
+	margin-bottom: 1rem;
 }
 
 .intro {
